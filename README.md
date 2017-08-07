@@ -1,2 +1,3 @@
 # angular4-force-awakens
-Inspired by John and Dan
+
+ ng new angular4-force-awakens --dry-run
