@@ -1,0 +1,15 @@
+<!--Menu Section-->
+<md-toolbar color="primary">
+  <span>App Manager</span>
+
+  <!-- This fills the remaining space of the current row -->
+  <div class="mdl-navigation">
+    
+  </div>
+  <nav>
+    <ul>
+      <li *ngFor="let item of menuItems" [routerLink]="item.route" routerLinkActive="route-link-active"><a ><span> {{ item.icon}}</span> {{item.text}}</a></li>
+    </ul>
+  </nav>
+
+</md-toolbar>
