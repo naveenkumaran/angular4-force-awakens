@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 
 import { IActor } from "../../shared/interfaces";
-import { ActorsService } from "../shared/actors.service";
+import { ActorsService } from "../actors.service";
 
 @Component({
   selector: 'app-actors-list',

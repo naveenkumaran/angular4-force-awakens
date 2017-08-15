@@ -12,7 +12,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryStoreService } from './api/in-memory-store.service';
 
 import { AppMenuService } from './app-nav-menu/app.menu.service';
-import { ActorsService } from "./actors/shared/actors.service";
+import { ActorsService } from "./actors/actors.service";
 
 import { AppNavMenuComponent } from './app-nav-menu/app-nav-menu.component';
 import { AppRoutingModule } from './app.routing.module';
