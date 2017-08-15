@@ -3,6 +3,6 @@ export const CONFIG = {
     config: 'commands/config',
     resetDb: 'commands/resetDb',
     users: 'api/users.json',
-    sessions: 'api/devices.json'
+    devices: 'api/devices.json'
   }
 };

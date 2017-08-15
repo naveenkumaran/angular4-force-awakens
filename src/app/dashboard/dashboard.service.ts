@@ -10,20 +10,16 @@ import { IActor } from "../shared/interfaces";
 const actorsUrl = CONFIG.baseUrls.users;
 
 @Injectable()
-export class ActorsService {
+export class DashboardService {
 
+    constructor(private http: Http) {   }
 
-  constructor(private http: Http) {   }
+    getDashboardData(): Observable<IActor[]> {
+        return this.http.get(actorsUrl).
+        map(res => this.extractData<IActor[]>(res))
+    }
 
-
-  getActors(): Observable<IActor[]> {
-    return this.http.get(actorsUrl).
-    map(res => this.extractData<IActor[]>(res))
-    .catch(this.handleError)
-  }
-
-  //Usage of generics to calculate data
-  private extractData<T>(res: Response) {
+    private extractData<T>(res: Response) {
 
     if (res.status < 200 || res.status >= 300) {
       throw new Error('Bad response status: ' + res.status);
@@ -32,9 +28,9 @@ export class ActorsService {
     const body = res.json ? res.json() : null;
 
     return <T>(body && body.data || {});
-  }
+    }
 
-  handleError(error: any) {
+    handleError(error: any) {
       console.error('Server side error:', error); 
       
       if (error instanceof Response) {
@@ -46,9 +42,10 @@ export class ActorsService {
         }
 
         return Observable.throw(errMessage);
-      }
+    }
 
-      return Observable.throw(error || 'Unknown server error!!!');
+    return Observable.throw(error || 'Unknown server error!!!');
   }
+
 
 }

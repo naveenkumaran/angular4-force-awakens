@@ -16,39 +16,6 @@ export class InMemoryStoreService implements InMemoryDbService {
      * 
      */
   createDb() {
-    const users = [
-      {
-        'id': 1,
-        'name': 'Chewbacca',
-        'email': 'chewy@starwars.com'
-      },
-      {
-        'id':2,
-        'name': 'Rey',
-        'email': 'reythebay@starwars.com'
-      },
-      {
-        'id': 3,
-        'name': 'Finn (F1287)',
-        'email': 'finn@starwars.com'
-      },
-      {
-        'id': 4,
-        'name': 'Han Solo',
-        'email': 'hans@starwars.com'
-      },
-      {
-        'id': 5,
-        'name': 'Leia Organa',
-        'email': 'leiag@starwars.com'
-      },
-      {
-        'id': 6,
-        'name': 'Luke Skywalker',
-        'email': 'lwalker@starwars.com'
-      },
-    ];
-
     const devices = [
       {
         'id': 'UDID130',
@@ -95,6 +62,45 @@ export class InMemoryStoreService implements InMemoryDbService {
         'name': 'Iphone 6s',
       },
     ];
+
+    const users = [
+      {
+        'id': 0,
+        'name': 'Chewbacca',
+        'email': 'chewy@starwars.com',
+        'devices' : [devices[0]]
+      },
+      {
+        'id':2,
+        'name': 'Rey',
+        'email': 'reythebay@starwars.com',
+        'devices' : [devices[1]]
+      },
+      {
+        'id': 3,
+        'name': 'Finn (F1287)',
+        'email': 'finn@starwars.com',
+        'devices' : [devices[3]]
+      },
+      {
+        'id': 4,
+        'name': 'Han Solo',
+        'email': 'hans@starwars.com',
+        'devices' : [devices[4]]
+      },
+      {
+        'id': 5,
+        'name': 'Leia Organa',
+        'email': 'leiag@starwars.com',
+        'devices' : [devices[5]]
+      },
+      {
+        'id': 6,
+        'name': 'Luke Skywalker',
+        'email': 'lwalker@starwars.com'
+      },
+    ];
+
 
     return { users, devices };
   }
