@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppMenuService } from '../app.menu.service';
-import { MenuItem } from '../app.menu.service';
-import { menuItemData } from '../app.menu.data';
+import { AppMenuService } from './app.menu.service';
+import { MenuItem } from './app.menu.service';
+import { menuItemData } from './app.menu.data';
 
 @Component({
   selector: 'app-nav-menu',

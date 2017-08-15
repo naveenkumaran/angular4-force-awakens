@@ -1,15 +1,12 @@
 <!--Menu Section-->
-<md-toolbar color="primary">
-  <span>App Manager</span>
-
-  <!-- This fills the remaining space of the current row -->
-  <div class="mdl-navigation">
-    
-  </div>
-  <nav>
-    <ul>
-      <li *ngFor="let item of menuItems" [routerLink]="item.route" routerLinkActive="route-link-active"><a ><span> {{ item.icon}}</span> {{item.text}}</a></li>
-    </ul>
-  </nav>
+<md-toolbar class="nav-bar" fullscreen>
+ <img class="toolbar-logo-img" src="../assets/0.jpg">
+  <h1 class="toolbar-logo-text">Asset Manager</h1>
+    <section class="toolbar-menu">
+    <!--routerLinkActive="route-link-active" #rla="routerLinkActive" -->
+    <a *ngFor="let item of menuItems" [routerLink]="item.route"  md-button
+      href=""><span> <!-- Add material icon --></span> {{item.text | toCaps}}</a>
+    </section>
+  <span class="fill"></span>
 
 </md-toolbar>

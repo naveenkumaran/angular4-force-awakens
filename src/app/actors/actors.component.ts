@@ -1,15 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-actors',
-  templateUrl: './actors.component.html',
-  styleUrls: ['./actors.component.css']
+  template: `<router-outlet></router-outlet>`,
 })
-export class ActorsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class ActorsComponent  { }

@@ -44,6 +44,15 @@ ng new angular4-force-awakens --routing --prefix myapp --style scss --dry-run
 ng generate module route --routing --module=app.module
 creates the route configuaration and updates the main app.module
 
+## Creating pipes
+ng generate pipe caps.convert --module=shared.module --dry-run
+
+##Creating shared module
+ng generate module actors/shared
+
+##Creating Services module under shared
+ng generate service actors/shared/actors.service --spec=false
+
 ##Package json 
 Dependencies structure
 Major minor upgrades with ^

@@ -1,0 +1,28 @@
+
+.demo-card-container{
+    padding: 15px;
+    display: flex;
+    flex-flow: wrap;
+    background-color: #fafafa;
+    .mat-card{
+        min-width: 300px;
+        max-width: 400px;
+        margin: 15px;
+        border-left: 2px solid #6c8898;
+        flex-grow:1;
+    }
+
+    .das-portfolio-cur{
+        font-size: 26px;
+        color: #006a8e;
+    }
+}
+
+.demo-card-blue {
+  background-color: #b0becc;
+
+  .mat-card-actions {
+    display: flex;
+    flex-direction: column;
+  }
+}

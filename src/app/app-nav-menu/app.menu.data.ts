@@ -8,7 +8,13 @@ export let menuItemData : Array<MenuItem> =  [{
   submenu: null
 },
 {
-  text: 'Actors', 
+  text: 'Devices', 
+  icon: 'glyphicon-wrench', // glyphicon md
+  route: '/devices', 
+  submenu: null
+},
+{
+  text: 'Users', 
   icon: 'glyphicon-wrench', // glyphicon md
   route: '/actors', 
   submenu: null
