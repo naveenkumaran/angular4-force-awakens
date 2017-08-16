@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { IActor } from "../shared/interfaces";
 import { DashboardService } from "./dashboard.service";
@@ -10,7 +11,10 @@ import { DashboardService } from "./dashboard.service";
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private dashboardService: DashboardService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private dashboardService: DashboardService,
+    private router: Router) { }
 
   actors : Observable<IActor[]>;
 
@@ -23,4 +27,11 @@ export class DashboardComponent implements OnInit {
     this.actors = this.dashboardService.getDashboardData();
     return this.actors;
   } 
+
+  showDetail(actor: IActor) {
+    const link = ['/actors', actor.id];
+    console.log("Navigating to " + link);
+    this.router.navigate(link);
+  }
+  
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { IActor } from "../../shared/interfaces";
 
 @Component({
   selector: 'app-actor',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActorComponent implements OnInit {
 
+  @Input() actor: IActor;
+  
   constructor() { }
 
   ngOnInit() {

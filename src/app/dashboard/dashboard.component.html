@@ -1,6 +1,7 @@
 <div class="demo-card-container" *ngIf="actors | async as dashboardActors; else loading" >
-  <md-card *ngFor="let actor of dashboardActors">
+  <md-card *ngFor="let actor of dashboardActors" (click) = "showDetail(actor)">
     <md-card-header >
+      <!--Binding an image by user id-->
       <img src="./assets/users/{{actor.id}}.png" md-card-avatar>
       <md-card-title>{{ actor.name }}</md-card-title>
       <md-card-subtitle>{{ actor.email }}</md-card-subtitle>
