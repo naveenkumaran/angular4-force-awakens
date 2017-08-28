@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { IActor } from "../shared/interfaces";
@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
     private router: Router) { }
 
   actors : Observable<IActor[]>;
-
+  
   ngOnInit() {
     this.getDashboardData();
   }
@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
   getDashboardData(): Observable<IActor[]> {
     this.actors = this.dashboardService.getDashboardData();
     return this.actors;
-  } 
+  }  
 
   showDetail(actor: IActor) {
     const link = ['/actors', actor.id];

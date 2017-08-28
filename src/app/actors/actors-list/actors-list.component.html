@@ -1,3 +1,9 @@
-<ul>
-    <li *ngFor="let actor of actors"> {{ actor.id }}  {{ actor.name }} {{ actor.email  }}</li>
-</ul>
+<div class="demo-card-container">
+    <md-card *ngFor="let actor of actors">
+      <md-card-header>
+        <img src="../../../assets/users/0.png" md-card-avatar>
+        <md-card-title>{{actor.name}}</md-card-title>
+        <md-card-subtitle>{{actor.email}}</md-card-subtitle>
+      </md-card-header>
+    </md-card>
+  </div>
